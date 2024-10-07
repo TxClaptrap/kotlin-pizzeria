@@ -23,6 +23,6 @@ fun ordenarPorPrecio(listaPizzas:List<PizzaDTO>, ascendente: Boolean): List<Pizz
 }*/
 
 fun contadPizzas(listaPizzas: List<PizzaDTO>, ingrediente: IngredienteDTO):Int {
-    return listaPizzas.count {it.listaIngredientes.any { it == ingrediente} }
+    return listaPizzas.count {it.listaIngredientes.contains(ingrediente) }
 }
 
